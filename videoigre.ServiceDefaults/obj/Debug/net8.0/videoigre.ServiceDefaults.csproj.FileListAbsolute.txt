@@ -1,0 +1,12 @@
+C:\Šola\videoigre\videoigre.ServiceDefaults\bin\Debug\net8.0\videoigre.ServiceDefaults.deps.json
+C:\Šola\videoigre\videoigre.ServiceDefaults\bin\Debug\net8.0\videoigre.ServiceDefaults.dll
+C:\Šola\videoigre\videoigre.ServiceDefaults\bin\Debug\net8.0\videoigre.ServiceDefaults.pdb
+C:\Šola\videoigre\videoigre.ServiceDefaults\obj\Debug\net8.0\videoigre.ServiceDefaults.csproj.AssemblyReference.cache
+C:\Šola\videoigre\videoigre.ServiceDefaults\obj\Debug\net8.0\videoigre.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\Šola\videoigre\videoigre.ServiceDefaults\obj\Debug\net8.0\videoigre.ServiceDefaults.AssemblyInfoInputs.cache
+C:\Šola\videoigre\videoigre.ServiceDefaults\obj\Debug\net8.0\videoigre.ServiceDefaults.AssemblyInfo.cs
+C:\Šola\videoigre\videoigre.ServiceDefaults\obj\Debug\net8.0\videoigre.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Šola\videoigre\videoigre.ServiceDefaults\obj\Debug\net8.0\videoigre.ServiceDefaults.dll
+C:\Šola\videoigre\videoigre.ServiceDefaults\obj\Debug\net8.0\refint\videoigre.ServiceDefaults.dll
+C:\Šola\videoigre\videoigre.ServiceDefaults\obj\Debug\net8.0\videoigre.ServiceDefaults.pdb
+C:\Šola\videoigre\videoigre.ServiceDefaults\obj\Debug\net8.0\ref\videoigre.ServiceDefaults.dll

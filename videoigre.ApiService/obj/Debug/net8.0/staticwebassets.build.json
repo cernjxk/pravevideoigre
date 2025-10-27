@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "i16J8xQVrUThmrzFoCWoKPcP06eeMncRptgn178moXs=",
+  "Source": "videoigre.ApiService",
+  "BasePath": "_content/videoigre.ApiService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
