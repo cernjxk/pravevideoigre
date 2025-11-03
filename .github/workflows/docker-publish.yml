@@ -1,4 +1,4 @@
-name: Docker Build and Push
+name: Docker Build, Push and Deploy to Azure
 
 on:
   push:
@@ -34,5 +34,12 @@ jobs:
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/videoigre:latest
             ${{ secrets.DOCKER_USERNAME }}/videoigre:${{ steps.vars.outputs.sha_short }}
-          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/ime-repozitorija:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/videoigre:latest
           cache-to: type=inline
+      
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'vaje'  
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: ${{ secrets.DOCKER_USERNAME }}/videoigre:latest
