@@ -2,33 +2,26 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Kopiraj solution in vse csproj datoteke
-COPY *.sln ./
-COPY videoigre.Web/*.csproj ./videoigre.Web/
-COPY videoigre.ServiceDefaults/*.csproj ./videoigre.ServiceDefaults/
-COPY videoigre.ApiService/*.csproj ./videoigre.ApiService/
+# Kopiraj csproj in restore
+COPY *.csproj ./
+RUN dotnet restore
 
-# Restore samo Web projekt (vključi ServiceDefaults če je potreben)
-RUN dotnet restore "videoigre.Web/videoigre.Web.csproj"
+# Kopiraj vse ostale datoteke
+COPY . ./
 
-# Kopiraj vse datoteke
-COPY videoigre.Web/ ./videoigre.Web/
-COPY videoigre.ServiceDefaults/ ./videoigre.ServiceDefaults/
-
-# Build in publish samo Web projekt
-WORKDIR /src/videoigre.Web
-RUN dotnet publish "videoigre.Web.csproj" -c Release -o /app/publish
+# Build in publish
+RUN dotnet publish -c Release -o /app/publish
 
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
-# Kopiraj zgrajeno aplikacijo
+# Kopiraj iz build stage
 COPY --from=build /app/publish .
 
-# Nastavi spremenljivke okolja
-ENV ASPNETCORE_URLS=http://+:8080
+# Expose port
 EXPOSE 8080
+ENV ASPNETCORE_URLS=http://+:8080
 
-# Zaženi Web aplikacijo
+# Entry point
 ENTRYPOINT ["dotnet", "videoigre.dll"]
